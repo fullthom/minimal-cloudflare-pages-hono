@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example Cloudflare Pages + Hono</title>
+    <script>
+      function callApi() {
+        fetch("/api/demo")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("apiResponse").textContent = data;
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            document.getElementById("apiResponse").textContent =
+              "Error calling API";
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Example Cloudflare Pages + Hono</h1>
+    <p>This is an example web page.</p>
+    <button onclick="callApi()">Call API</button>
+    <p id="apiResponse"></p>
+  </body>
+</html>

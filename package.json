@@ -1,0 +1,17 @@
+{
+  "name": "minimal-cloudflare-pages-hono",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240725.0",
+    "typescript": "^5.5.4",
+    "wrangler": "^3.67.1"
+  },
+  "scripts": {
+    "dev": "wrangler pages dev ./public --compatibility-date=2024-08-03",
+    "deploy": "wrangler pages deploy ./public"
+  },
+  "dependencies": {
+    "hono": "^4.5.3"
+  }
+}
